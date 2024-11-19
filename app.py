@@ -18,7 +18,7 @@ all_option = 'Select all'
 selected_sector = st.multiselect("Select sector(s)", options = [all_option] + list(df["qp_sector"].unique()), default = [], placeholder = "sector")
 
 #Selecting no of QPs to display
-number_QPs = st.selectbox("Number of top QP matches", [5,10,15], index = None, placeholder= "Choose a number from below")
+number_QPs = st.selectbox("Number of top QP matches", [5,10,15], index = None, placeholder= "number")
 
 if all_option in selected_sector:
     selected_sector = list(df["qp_sector"].unique())
