@@ -43,3 +43,5 @@ if st.button ("Find closest matching Qualification Packs", type = "primary"):
             },
         hide_index=True,
         )
+st.write(f"A simlairity score of more than {df['similarity'].quantile(0.95):.2f} (P95) means  that qualification pack has one of the highest matches.")
+st.write(f"A similarity score of less than {df['similarity'].quantile(0.05):.2f} (P5) means job description and qualification pack do not match at all.")
